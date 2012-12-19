@@ -61,7 +61,7 @@
 										<object class="NSTextFieldCell" key="NSCell" id="428841280">
 											<int key="NSCellFlags">68157504</int>
 											<int key="NSCellFlags2">272630784</int>
-											<string key="NSContents">50</string>
+											<string key="NSContents">15</string>
 											<object class="NSFont" key="NSSupport">
 												<string key="NSName">LucidaGrande-Bold</string>
 												<double key="NSSize">45</double>
@@ -147,7 +147,7 @@
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSSliderCell" key="NSCell" id="886702829">
-											<int key="NSCellFlags">-2080374784</int>
+											<int key="NSCellFlags">-2080112384</int>
 											<int key="NSCellFlags2">0</int>
 											<string key="NSContents"/>
 											<string key="NSCellIdentifier">_NS:9</string>
@@ -171,7 +171,7 @@
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="899074682">
-											<int key="NSCellFlags">-2080374784</int>
+											<int key="NSCellFlags">67108864</int>
 											<int key="NSCellFlags2">268435456</int>
 											<string key="NSContents">Check</string>
 											<reference key="NSSupport" ref="496958844"/>
@@ -302,6 +302,62 @@
 						<reference key="destination" ref="246838215"/>
 					</object>
 					<int key="connectionID">52</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">timeField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="365089062"/>
+					</object>
+					<int key="connectionID">53</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">sliderValueChanged:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="376084463"/>
+					</object>
+					<int key="connectionID">54</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">timeLabel</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="785928458"/>
+					</object>
+					<int key="connectionID">55</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">switchControl</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="339172167"/>
+					</object>
+					<int key="connectionID">56</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">switchActivated:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="339172167"/>
+					</object>
+					<int key="connectionID">57</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">slider</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="376084463"/>
+					</object>
+					<int key="connectionID">58</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">noteFiled</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="171226213"/>
+					</object>
+					<int key="connectionID">59</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -472,7 +528,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">52</int>
+			<int key="maxID">59</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

@@ -25,6 +25,8 @@
 		56B56A3816818D160080882F /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A3516818D160080882F /* OnOffSwitchControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		56B56A3916818D160080882F /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A3716818D160080882F /* OnOffSwitchControlCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		56B56A3B16818FBC0080882F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B56A3A16818FBC0080882F /* Carbon.framework */; };
+		CF97617C1681C9CA00FB2C1E /* AlarmView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF97617B1681C9CA00FB2C1E /* AlarmView.m */; };
+		CF97617F1681CFE200FB2C1E /* AlarmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF97617E1681CFE200FB2C1E /* AlarmView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,9 @@
 		56B56A3716818D160080882F /* OnOffSwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControlCell.m; sourceTree = "<group>"; };
 		56B56A3A16818FBC0080882F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		56B56A3F168194280080882F /* NSView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Animations.h"; sourceTree = "<group>"; };
+		CF97617A1681C9CA00FB2C1E /* AlarmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmView.h; sourceTree = "<group>"; };
+		CF97617B1681C9CA00FB2C1E /* AlarmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmView.m; sourceTree = "<group>"; };
+		CF97617E1681CFE200FB2C1E /* AlarmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +138,7 @@
 				565ACE271680E672001F0B35 /* MainMenu.xib */,
 				565ACE401680F075001F0B35 /* Panel.xib */,
 				56B56A31168187AA0080882F /* TimerView.xib */,
+				CF97617E1681CFE200FB2C1E /* AlarmView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -158,6 +164,8 @@
 				565ACE431680F409001F0B35 /* Panel.m */,
 				56B56A2E1681878B0080882F /* TimerView.h */,
 				56B56A2F1681878B0080882F /* TimerView.m */,
+				CF97617A1681C9CA00FB2C1E /* AlarmView.h */,
+				CF97617B1681C9CA00FB2C1E /* AlarmView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 				565ACE321680E762001F0B35 /* StatusHighlighted.png in Resources */,
 				565ACE411680F075001F0B35 /* Panel.xib in Resources */,
 				56B56A32168187AA0080882F /* TimerView.xib in Resources */,
+				CF97617F1681CFE200FB2C1E /* AlarmView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +259,7 @@
 				56B56A301681878B0080882F /* TimerView.m in Sources */,
 				56B56A3816818D160080882F /* OnOffSwitchControl.m in Sources */,
 				56B56A3916818D160080882F /* OnOffSwitchControlCell.m in Sources */,
+				CF97617C1681C9CA00FB2C1E /* AlarmView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

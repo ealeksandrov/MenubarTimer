@@ -9,6 +9,7 @@
 #import "BackgroundView.h"
 #import "StatusItemView.h"
 #import "TimerView.h"
+#import "AlarmView.h"
 
 @class PanelController;
 
@@ -22,7 +23,7 @@
 
 #pragma mark -
 
-@interface PanelController : NSWindowController <NSWindowDelegate,TimerDelegate> {
+@interface PanelController : NSWindowController <NSWindowDelegate,TimerDelegate,AlarmDelegate> {
     BOOL _hasActivePanel;
     int popupHeight;
     NSMutableArray *timersArray;
@@ -40,7 +41,8 @@
 - (void)openPanel;
 - (void)closePanel;
 
--(IBAction)more:(id)sender;
--(IBAction)less:(id)sender;
+-(IBAction)addTimer:(id)sender;
+-(IBAction)addAlarm:(id)sender;
+-(IBAction)terminate:(id)sender;
 
 @end

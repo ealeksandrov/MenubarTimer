@@ -17,7 +17,7 @@
 
 #define SEARCH_INSET 17
 
-#define POPUP_HEIGHT 125
+#define POPUP_HEIGHT 85
 #define PANEL_WIDTH 280
 #define MENU_ANIMATION_DURATION .1
 
@@ -48,28 +48,63 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSControlTextDidChangeNotification object:self.searchField];
 }
 
--(IBAction)more:(id)sender {
-    NSRect oldFrame = [[self window] frame];
-    
-    oldFrame.size.height += DY;
-    oldFrame.origin.y -= DY;
-    [[self window] setFrame:oldFrame display:YES animate:YES];
-    
-    TimerView *newTimer = [[TimerView alloc] initWithNibName:@"TimerView" bundle:nil];
-    newTimer.delegate=self;
-    [self.backgroundView addSubview:newTimer.view animated:YES];
-    [timersArray addObject:newTimer];
+-(IBAction)terminate:(id)sender {
+    [[NSApplication sharedApplication] terminate:self];
 }
 
--(IBAction)less:(id)sender {
+-(IBAction)addTimer:(id)sender {
+    if([timersArray count]<5) {
+        NSRect oldFrame = [[self window] frame];
+        oldFrame.size.height += DY;
+        oldFrame.origin.y -= DY;
+        [[self window] setFrame:oldFrame display:YES animate:YES];
+    
+        TimerView *newTimer = [[TimerView alloc] initWithNibName:@"TimerView" bundle:nil];
+        newTimer.delegate=self;
+        [self.backgroundView addSubview:newTimer.view animated:YES];
+        [timersArray addObject:newTimer];
+        }
+}
+
+-(IBAction)addAlarm:(id)sender {
+    if([timersArray count]<5) {
+        NSRect oldFrame = [[self window] frame];
+        oldFrame.size.height += DY;
+        oldFrame.origin.y -= DY;
+        [[self window] setFrame:oldFrame display:YES animate:YES];
+        
+        AlarmView *newAlarm = [[AlarmView alloc] initWithNibName:@"AlarmView" bundle:nil];
+        newAlarm.delegate=self;
+        [self.backgroundView addSubview:newAlarm.view animated:YES];
+        [timersArray addObject:newAlarm];
+    }
+}
+
+-(void) deleteTimer:(NSViewController *)timerInstance {
+    NSUInteger delIndex = [timersArray indexOfObject:timerInstance];
+    [timersArray removeObject:timerInstance];
+    [timerInstance.view removeFromSuperviewAnimated:YES];
+    
+    [NSAnimationContext beginGrouping];
+    [[NSAnimationContext currentContext] setDuration:1.0f]; // However long you want the slide to take
+        
+    for (NSViewController *timer in timersArray) {
+        if ([timersArray indexOfObject:timer]>=delIndex) {
+            CGRect oldFrame = timer.view.frame;
+            //oldFrame.origin.y+= DY;
+            [[timer.view animator] setFrame:oldFrame];
+        }
+    }
+    [NSAnimationContext endGrouping];
+    
     NSRect oldFrame = [[self window] frame];
     oldFrame.size.height -= DY;
     oldFrame.origin.y += DY;
     [[self window] setFrame:oldFrame display:YES animate:YES];
 }
 
--(void) deleteTimer:(TimerView *)timerInstance {
-    NSLog(@"ads");
+- (void)fireAlarmWithNote:(NSString *)note {
+    NSLog(@"Note is: %@",note);
 }
 
 #pragma mark -
