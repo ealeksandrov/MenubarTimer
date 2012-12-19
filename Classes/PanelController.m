@@ -11,6 +11,7 @@
 #import "StatusItemView.h"
 #import "MenubarController.h"
 #import "NSView+Animations.h"
+#import "AlertView.h"
 
 #define OPEN_DURATION .15
 #define CLOSE_DURATION .1
@@ -105,6 +106,9 @@
 
 - (void)fireAlarmWithNote:(NSString *)note {
     NSLog(@"Note is: %@",note);
+
+    AlertView *view = [[AlertView alloc] initWithMessage:note];
+    [view showWindow:nil];
 }
 
 #pragma mark -

@@ -27,6 +27,8 @@
 		56B56A3B16818FBC0080882F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B56A3A16818FBC0080882F /* Carbon.framework */; };
 		CF97617C1681C9CA00FB2C1E /* AlarmView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF97617B1681C9CA00FB2C1E /* AlarmView.m */; };
 		CF97617F1681CFE200FB2C1E /* AlarmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF97617E1681CFE200FB2C1E /* AlarmView.xib */; };
+		CF9761821681D8F100FB2C1E /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9761811681D8F000FB2C1E /* AlertView.m */; };
+		CF9761841681DA7100FB2C1E /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9761831681DA7100FB2C1E /* AlertView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,9 @@
 		CF97617A1681C9CA00FB2C1E /* AlarmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmView.h; sourceTree = "<group>"; };
 		CF97617B1681C9CA00FB2C1E /* AlarmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmView.m; sourceTree = "<group>"; };
 		CF97617E1681CFE200FB2C1E /* AlarmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmView.xib; sourceTree = "<group>"; };
+		CF9761801681D8F000FB2C1E /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		CF9761811681D8F000FB2C1E /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
+		CF9761831681DA7100FB2C1E /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,7 @@
 				565ACE401680F075001F0B35 /* Panel.xib */,
 				56B56A31168187AA0080882F /* TimerView.xib */,
 				CF97617E1681CFE200FB2C1E /* AlarmView.xib */,
+				CF9761831681DA7100FB2C1E /* AlertView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 				56B56A2F1681878B0080882F /* TimerView.m */,
 				CF97617A1681C9CA00FB2C1E /* AlarmView.h */,
 				CF97617B1681C9CA00FB2C1E /* AlarmView.m */,
+				CF9761801681D8F000FB2C1E /* AlertView.h */,
+				CF9761811681D8F000FB2C1E /* AlertView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 				565ACE411680F075001F0B35 /* Panel.xib in Resources */,
 				56B56A32168187AA0080882F /* TimerView.xib in Resources */,
 				CF97617F1681CFE200FB2C1E /* AlarmView.xib in Resources */,
+				CF9761841681DA7100FB2C1E /* AlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				56B56A3816818D160080882F /* OnOffSwitchControl.m in Sources */,
 				56B56A3916818D160080882F /* OnOffSwitchControlCell.m in Sources */,
 				CF97617C1681C9CA00FB2C1E /* AlarmView.m in Sources */,
+				CF9761821681D8F100FB2C1E /* AlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
