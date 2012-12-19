@@ -30,8 +30,6 @@
 }
 
 @property (nonatomic, unsafe_unretained) IBOutlet BackgroundView *backgroundView;
-@property (nonatomic, unsafe_unretained) IBOutlet NSSearchField *searchField;
-@property (nonatomic, unsafe_unretained) IBOutlet NSTextField *textField;
 
 @property (nonatomic) BOOL hasActivePanel;
 @property (nonatomic, unsafe_unretained, readonly) id<PanelControllerDelegate> delegate;
@@ -44,5 +42,6 @@
 -(IBAction)addTimer:(id)sender;
 -(IBAction)addAlarm:(id)sender;
 -(IBAction)terminate:(id)sender;
+-(IBAction)openPrefs:(id)sender;
 
 @end

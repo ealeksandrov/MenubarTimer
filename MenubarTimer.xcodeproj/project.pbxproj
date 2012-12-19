@@ -19,6 +19,8 @@
 		565ACE3F1680EB55001F0B35 /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE3E1680EB55001F0B35 /* MenubarController.m */; };
 		565ACE411680F075001F0B35 /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE401680F075001F0B35 /* Panel.xib */; };
 		565ACE441680F409001F0B35 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE431680F409001F0B35 /* Panel.m */; };
+		56907E3F168240A700C7620A /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56907E3E168240A700C7620A /* SettingsView.m */; };
+		56907E411682472A00C7620A /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56907E401682472A00C7620A /* SettingsView.xib */; };
 		56B56A2C168180790080882F /* NSView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A2B168180790080882F /* NSView+Animations.m */; };
 		56B56A301681878B0080882F /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A2F1681878B0080882F /* TimerView.m */; };
 		56B56A32168187AA0080882F /* TimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B56A31168187AA0080882F /* TimerView.xib */; };
@@ -56,6 +58,9 @@
 		565ACE401680F075001F0B35 /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Panel.xib; sourceTree = "<group>"; };
 		565ACE421680F409001F0B35 /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
 		565ACE431680F409001F0B35 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
+		56907E3D168240A700C7620A /* SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsView.h; sourceTree = "<group>"; };
+		56907E3E168240A700C7620A /* SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsView.m; sourceTree = "<group>"; };
+		56907E401682472A00C7620A /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 		56B56A2B168180790080882F /* NSView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Animations.m"; sourceTree = "<group>"; };
 		56B56A2E1681878B0080882F /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
 		56B56A2F1681878B0080882F /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
@@ -145,6 +150,7 @@
 				56B56A31168187AA0080882F /* TimerView.xib */,
 				CF97617E1681CFE200FB2C1E /* AlarmView.xib */,
 				CF9761831681DA7100FB2C1E /* AlertView.xib */,
+				56907E401682472A00C7620A /* SettingsView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 				CF97617B1681C9CA00FB2C1E /* AlarmView.m */,
 				CF9761801681D8F000FB2C1E /* AlertView.h */,
 				CF9761811681D8F000FB2C1E /* AlertView.m */,
+				56907E3D168240A700C7620A /* SettingsView.h */,
+				56907E3E168240A700C7620A /* SettingsView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				56B56A32168187AA0080882F /* TimerView.xib in Resources */,
 				CF97617F1681CFE200FB2C1E /* AlarmView.xib in Resources */,
 				CF9761841681DA7100FB2C1E /* AlertView.xib in Resources */,
+				56907E411682472A00C7620A /* SettingsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +279,7 @@
 				56B56A3916818D160080882F /* OnOffSwitchControlCell.m in Sources */,
 				CF97617C1681C9CA00FB2C1E /* AlarmView.m in Sources */,
 				CF9761821681D8F100FB2C1E /* AlertView.m in Sources */,
+				56907E3F168240A700C7620A /* SettingsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
