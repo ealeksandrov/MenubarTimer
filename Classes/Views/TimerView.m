@@ -20,4 +20,8 @@
     return self;
 }
 
+-(IBAction)deleteMe:(id)sender {
+    [self.delegate deleteTimer:self];
+}
+
 @end

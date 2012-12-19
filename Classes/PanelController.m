@@ -10,8 +10,7 @@
 #import "BackgroundView.h"
 #import "StatusItemView.h"
 #import "MenubarController.h"
-#import "NSView+Animations.m"
-#import "TimerView.h"
+#import "NSView+Animations.h"
 
 #define OPEN_DURATION .15
 #define CLOSE_DURATION .1
@@ -39,6 +38,7 @@
     {
         _delegate = delegate;
         popupHeight=POPUP_HEIGHT;
+        timersArray = [NSMutableArray array];
     }
     return self;
 }
@@ -56,9 +56,9 @@
     [[self window] setFrame:oldFrame display:YES animate:YES];
     
     TimerView *newTimer = [[TimerView alloc] initWithNibName:@"TimerView" bundle:nil];
+    newTimer.delegate=self;
     [self.backgroundView addSubview:newTimer.view animated:YES];
-    
-    
+    [timersArray addObject:newTimer];
 }
 
 -(IBAction)less:(id)sender {
@@ -66,6 +66,10 @@
     oldFrame.size.height -= DY;
     oldFrame.origin.y += DY;
     [[self window] setFrame:oldFrame display:YES animate:YES];
+}
+
+-(void) deleteTimer:(TimerView *)timerInstance {
+    NSLog(@"ads");
 }
 
 #pragma mark -
