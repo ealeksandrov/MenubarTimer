@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		565ACE011680E57D001F0B35 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565ACE001680E57D001F0B35 /* Cocoa.framework */; };
+		565ACE251680E66B001F0B35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE241680E66B001F0B35 /* AppDelegate.m */; };
+		565ACE281680E672001F0B35 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE271680E672001F0B35 /* MainMenu.xib */; };
+		565ACE2D1680E678001F0B35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE2A1680E678001F0B35 /* main.m */; };
+		565ACE311680E762001F0B35 /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE2F1680E762001F0B35 /* Status.png */; };
+		565ACE321680E762001F0B35 /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE301680E762001F0B35 /* StatusHighlighted.png */; };
+		565ACE361680E821001F0B35 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE351680E821001F0B35 /* StatusItemView.m */; };
+		565ACE391680E938001F0B35 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE381680E938001F0B35 /* BackgroundView.m */; };
+		565ACE3C1680EA95001F0B35 /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE3B1680EA95001F0B35 /* PanelController.m */; };
+		565ACE3F1680EB55001F0B35 /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE3E1680EB55001F0B35 /* MenubarController.m */; };
+		565ACE411680F075001F0B35 /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE401680F075001F0B35 /* Panel.xib */; };
+		565ACE441680F409001F0B35 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE431680F409001F0B35 /* Panel.m */; };
+		56B56A2C168180790080882F /* NSView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A2B168180790080882F /* NSView+Animations.m */; };
+		56B56A301681878B0080882F /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A2F1681878B0080882F /* TimerView.m */; };
+		56B56A32168187AA0080882F /* TimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B56A31168187AA0080882F /* TimerView.xib */; };
+		56B56A3816818D160080882F /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A3516818D160080882F /* OnOffSwitchControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		56B56A3916818D160080882F /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B56A3716818D160080882F /* OnOffSwitchControlCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		56B56A3B16818FBC0080882F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B56A3A16818FBC0080882F /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		565ACDFC1680E57D001F0B35 /* MenubarTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenubarTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		565ACE001680E57D001F0B35 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		565ACE031680E57D001F0B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		565ACE041680E57D001F0B35 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		565ACE051680E57D001F0B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		565ACE231680E66B001F0B35 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		565ACE241680E66B001F0B35 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		565ACE271680E672001F0B35 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		565ACE2A1680E678001F0B35 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		565ACE2B1680E678001F0B35 /* MenubarTimer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MenubarTimer-Info.plist"; sourceTree = "<group>"; };
+		565ACE2C1680E678001F0B35 /* MenubarTimer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MenubarTimer-Prefix.pch"; sourceTree = "<group>"; };
+		565ACE2F1680E762001F0B35 /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Status.png; sourceTree = "<group>"; };
+		565ACE301680E762001F0B35 /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusHighlighted.png; sourceTree = "<group>"; };
+		565ACE341680E821001F0B35 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		565ACE351680E821001F0B35 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		565ACE371680E938001F0B35 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		565ACE381680E938001F0B35 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		565ACE3A1680EA95001F0B35 /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
+		565ACE3B1680EA95001F0B35 /* PanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelController.m; sourceTree = "<group>"; };
+		565ACE3D1680EB55001F0B35 /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
+		565ACE3E1680EB55001F0B35 /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
+		565ACE401680F075001F0B35 /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Panel.xib; sourceTree = "<group>"; };
+		565ACE421680F409001F0B35 /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
+		565ACE431680F409001F0B35 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
+		56B56A2B168180790080882F /* NSView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Animations.m"; sourceTree = "<group>"; };
+		56B56A2E1681878B0080882F /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
+		56B56A2F1681878B0080882F /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
+		56B56A31168187AA0080882F /* TimerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerView.xib; sourceTree = "<group>"; };
+		56B56A3416818D160080882F /* OnOffSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControl.h; sourceTree = "<group>"; };
+		56B56A3516818D160080882F /* OnOffSwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControl.m; sourceTree = "<group>"; };
+		56B56A3616818D160080882F /* OnOffSwitchControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControlCell.h; sourceTree = "<group>"; };
+		56B56A3716818D160080882F /* OnOffSwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControlCell.m; sourceTree = "<group>"; };
+		56B56A3A16818FBC0080882F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		56B56A3F168194280080882F /* NSView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Animations.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		565ACDF91680E57D001F0B35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B56A3B16818FBC0080882F /* Carbon.framework in Frameworks */,
+				565ACE011680E57D001F0B35 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		565ACDF11680E57D001F0B35 = {
+			isa = PBXGroup;
+			children = (
+				565ACE221680E66B001F0B35 /* Classes */,
+				565ACE291680E678001F0B35 /* Supporting files */,
+				565ACE261680E672001F0B35 /* Resources */,
+				565ACDFF1680E57D001F0B35 /* Frameworks */,
+				565ACDFD1680E57D001F0B35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		565ACDFD1680E57D001F0B35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				565ACDFC1680E57D001F0B35 /* MenubarTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		565ACDFF1680E57D001F0B35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56B56A3A16818FBC0080882F /* Carbon.framework */,
+				565ACE031680E57D001F0B35 /* AppKit.framework */,
+				565ACE041680E57D001F0B35 /* CoreData.framework */,
+				565ACE051680E57D001F0B35 /* Foundation.framework */,
+				565ACE001680E57D001F0B35 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		565ACE221680E66B001F0B35 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				56B56A3316818D150080882F /* SwitchControl */,
+				56B56A3F168194280080882F /* NSView+Animations.h */,
+				56B56A2B168180790080882F /* NSView+Animations.m */,
+				565ACE331680E7E1001F0B35 /* Views */,
+				565ACE231680E66B001F0B35 /* AppDelegate.h */,
+				565ACE241680E66B001F0B35 /* AppDelegate.m */,
+				565ACE3A1680EA95001F0B35 /* PanelController.h */,
+				565ACE3B1680EA95001F0B35 /* PanelController.m */,
+				565ACE3D1680EB55001F0B35 /* MenubarController.h */,
+				565ACE3E1680EB55001F0B35 /* MenubarController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		565ACE261680E672001F0B35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				565ACE2F1680E762001F0B35 /* Status.png */,
+				565ACE301680E762001F0B35 /* StatusHighlighted.png */,
+				565ACE271680E672001F0B35 /* MainMenu.xib */,
+				565ACE401680F075001F0B35 /* Panel.xib */,
+				56B56A31168187AA0080882F /* TimerView.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		565ACE291680E678001F0B35 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				565ACE2A1680E678001F0B35 /* main.m */,
+				565ACE2B1680E678001F0B35 /* MenubarTimer-Info.plist */,
+				565ACE2C1680E678001F0B35 /* MenubarTimer-Prefix.pch */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		565ACE331680E7E1001F0B35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				565ACE341680E821001F0B35 /* StatusItemView.h */,
+				565ACE351680E821001F0B35 /* StatusItemView.m */,
+				565ACE371680E938001F0B35 /* BackgroundView.h */,
+				565ACE381680E938001F0B35 /* BackgroundView.m */,
+				565ACE421680F409001F0B35 /* Panel.h */,
+				565ACE431680F409001F0B35 /* Panel.m */,
+				56B56A2E1681878B0080882F /* TimerView.h */,
+				56B56A2F1681878B0080882F /* TimerView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56B56A3316818D150080882F /* SwitchControl */ = {
+			isa = PBXGroup;
+			children = (
+				56B56A3416818D160080882F /* OnOffSwitchControl.h */,
+				56B56A3516818D160080882F /* OnOffSwitchControl.m */,
+				56B56A3616818D160080882F /* OnOffSwitchControlCell.h */,
+				56B56A3716818D160080882F /* OnOffSwitchControlCell.m */,
+			);
+			path = SwitchControl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		565ACDFB1680E57D001F0B35 /* MenubarTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 565ACE1A1680E57D001F0B35 /* Build configuration list for PBXNativeTarget "MenubarTimer" */;
+			buildPhases = (
+				565ACDF81680E57D001F0B35 /* Sources */,
+				565ACDF91680E57D001F0B35 /* Frameworks */,
+				565ACDFA1680E57D001F0B35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MenubarTimer;
+			productName = MenubarTimer;
+			productReference = 565ACDFC1680E57D001F0B35 /* MenubarTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		565ACDF31680E57D001F0B35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = TestTask;
+			};
+			buildConfigurationList = 565ACDF61680E57D001F0B35 /* Build configuration list for PBXProject "MenubarTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 565ACDF11680E57D001F0B35;
+			productRefGroup = 565ACDFD1680E57D001F0B35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				565ACDFB1680E57D001F0B35 /* MenubarTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		565ACDFA1680E57D001F0B35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565ACE281680E672001F0B35 /* MainMenu.xib in Resources */,
+				565ACE311680E762001F0B35 /* Status.png in Resources */,
+				565ACE321680E762001F0B35 /* StatusHighlighted.png in Resources */,
+				565ACE411680F075001F0B35 /* Panel.xib in Resources */,
+				56B56A32168187AA0080882F /* TimerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		565ACDF81680E57D001F0B35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565ACE251680E66B001F0B35 /* AppDelegate.m in Sources */,
+				565ACE2D1680E678001F0B35 /* main.m in Sources */,
+				565ACE361680E821001F0B35 /* StatusItemView.m in Sources */,
+				565ACE391680E938001F0B35 /* BackgroundView.m in Sources */,
+				565ACE3C1680EA95001F0B35 /* PanelController.m in Sources */,
+				565ACE3F1680EB55001F0B35 /* MenubarController.m in Sources */,
+				565ACE441680F409001F0B35 /* Panel.m in Sources */,
+				56B56A2C168180790080882F /* NSView+Animations.m in Sources */,
+				56B56A301681878B0080882F /* TimerView.m in Sources */,
+				56B56A3816818D160080882F /* OnOffSwitchControl.m in Sources */,
+				56B56A3916818D160080882F /* OnOffSwitchControlCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		565ACE181680E57D001F0B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		565ACE191680E57D001F0B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		565ACE1B1680E57D001F0B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting files/MenubarTimer-Prefix.pch";
+				INFOPLIST_FILE = "Supporting files/MenubarTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		565ACE1C1680E57D001F0B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting files/MenubarTimer-Prefix.pch";
+				INFOPLIST_FILE = "Supporting files/MenubarTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		565ACDF61680E57D001F0B35 /* Build configuration list for PBXProject "MenubarTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				565ACE181680E57D001F0B35 /* Debug */,
+				565ACE191680E57D001F0B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		565ACE1A1680E57D001F0B35 /* Build configuration list for PBXNativeTarget "MenubarTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				565ACE1B1680E57D001F0B35 /* Debug */,
+				565ACE1C1680E57D001F0B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 565ACDF31680E57D001F0B35 /* Project object */;
+}
