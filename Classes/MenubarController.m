@@ -69,12 +69,10 @@
 
 -(void)turnIconOn {
     self.hasTimerIcon=YES;
-    NSLog(@"sad");
 }
 
 -(void)turnIconOff {
     self.hasTimerIcon=NO;
-    NSLog(@"sad2");
 }
 
 @end

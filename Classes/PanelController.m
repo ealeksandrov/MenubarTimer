@@ -137,6 +137,8 @@
 }
 
 - (void)fireAlarmWithNote:(NSString *)note {
+    [[NSSound soundNamed:@"alert_sound"] play];
+    
     if(showAlertWindow) {
     AlertView *view = [[AlertView alloc] initWithMessage:note];
     NSWindow *window = view.window;
