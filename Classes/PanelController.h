@@ -40,6 +40,7 @@
 
 - (void)openPanel;
 - (void)closePanel;
+- (void)resignTextControl;
 
 -(IBAction)addTimer:(id)sender;
 -(IBAction)addAlarm:(id)sender;

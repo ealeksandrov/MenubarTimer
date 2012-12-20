@@ -15,6 +15,9 @@
 }
 
 -(IBAction)switchActivated:(id)sender {
+    
+    [[self.view window] makeFirstResponder:nil];
+    
     if(self.switchControl.state) {
         
         [timer invalidate];

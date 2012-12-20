@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1070</int>
-		<string key="IBDocument.SystemVersion">11G63</string>
+		<int key="IBDocument.SystemTarget">1080</int>
+		<string key="IBDocument.SystemVersion">12C60</string>
 		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
-		<string key="IBDocument.AppKitVersion">1138.51</string>
-		<string key="IBDocument.HIToolboxVersion">569.00</string>
+		<string key="IBDocument.AppKitVersion">1187.34</string>
+		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">2844</string>
@@ -88,6 +88,7 @@
 												</object>
 											</object>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSTextField" id="785928458">
 										<reference key="NSNextResponder" ref="727665413"/>
@@ -111,12 +112,14 @@
 											<reference key="NSBackgroundColor" ref="204075273"/>
 											<reference key="NSTextColor" ref="349027568"/>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSButton" id="246838215">
 										<reference key="NSNextResponder" ref="727665413"/>
 										<int key="NSvFlags">268</int>
 										<string key="NSFrame">{{79, 1}, {117, 32}}</string>
 										<reference key="NSSuperview" ref="727665413"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="627649050">
@@ -137,6 +140,7 @@
 											<int key="NSPeriodicDelay">200</int>
 											<int key="NSPeriodicInterval">25</int>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSSlider" id="376084463">
 										<reference key="NSNextResponder" ref="727665413"/>
@@ -161,6 +165,7 @@
 											<bool key="NSAllowsTickMarkValuesOnly">NO</bool>
 											<bool key="NSVertical">NO</bool>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSButton" id="339172167">
 										<reference key="NSNextResponder" ref="727665413"/>
@@ -191,6 +196,7 @@
 											<int key="NSPeriodicDelay">200</int>
 											<int key="NSPeriodicInterval">25</int>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSTextField" id="993815949">
 										<reference key="NSNextResponder" ref="727665413"/>
@@ -210,6 +216,7 @@
 											<reference key="NSBackgroundColor" ref="204075273"/>
 											<reference key="NSTextColor" ref="349027568"/>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSTextField" id="171226213">
 										<reference key="NSNextResponder" ref="727665413"/>
@@ -243,6 +250,7 @@
 												<reference key="NSColor" ref="431834882"/>
 											</object>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 								</array>
 								<string key="NSFrame">{{1, 1}, {262, 132}}</string>
@@ -282,7 +290,7 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="1068504741"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<string key="NSClassName">NSView</string>
+				<string key="NSClassName">ResignView</string>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">

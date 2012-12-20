@@ -73,6 +73,10 @@
     [NSGraphicsContext restoreGraphicsState];
 }
 
+-(void) mouseDown:(NSEvent *)theEvent {
+    [[self window] makeFirstResponder:nil];
+}
+
 #pragma mark -
 #pragma mark Public accessors
 

@@ -55,6 +55,8 @@
 }
 
 -(IBAction)addTimer:(id)sender {
+    [self resignTextControl];
+    
     if([timersArray count]<5) {
         NSRect oldFrame = [[self window] frame];
         oldFrame.size.height += DY;
@@ -69,6 +71,8 @@
 }
 
 -(IBAction)addAlarm:(id)sender {
+    [self resignTextControl];
+    
     if([timersArray count]<5) {
         NSRect oldFrame = [[self window] frame];
         oldFrame.size.height += DY;
@@ -82,7 +86,13 @@
     }
 }
 
+-(void) resignTextControl {
+    [[self window] makeFirstResponder:nil];
+}
+
 -(void) deleteTimer:(NSViewController *)timerInstance {
+    [self resignTextControl];
+    
     NSUInteger delIndex = [timersArray indexOfObject:timerInstance];
     [timersArray removeObject:timerInstance];
     [timerInstance.view removeFromSuperviewAnimated:YES];
@@ -114,6 +124,7 @@
 }
 
 -(IBAction)openPrefs:(id)sender {
+    [self resignTextControl];
     
     SettingsView *view = [[SettingsView alloc] initWithSetting:showAlertWindow];
     view.delegate=self;

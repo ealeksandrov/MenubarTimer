@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		564B063B1682D1EB00CA4D8C /* ResignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B063A1682D1EB00CA4D8C /* ResignView.m */; };
 		565ACE011680E57D001F0B35 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565ACE001680E57D001F0B35 /* Cocoa.framework */; };
 		565ACE251680E66B001F0B35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE241680E66B001F0B35 /* AppDelegate.m */; };
 		565ACE281680E672001F0B35 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE271680E672001F0B35 /* MainMenu.xib */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		564B06391682D1EB00CA4D8C /* ResignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResignView.h; sourceTree = "<group>"; };
+		564B063A1682D1EB00CA4D8C /* ResignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResignView.m; sourceTree = "<group>"; };
 		565ACDFC1680E57D001F0B35 /* MenubarTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenubarTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565ACE001680E57D001F0B35 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		565ACE031680E57D001F0B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -182,6 +185,8 @@
 				CF9761811681D8F000FB2C1E /* AlertView.m */,
 				56907E3D168240A700C7620A /* SettingsView.h */,
 				56907E3E168240A700C7620A /* SettingsView.m */,
+				564B06391682D1EB00CA4D8C /* ResignView.h */,
+				564B063A1682D1EB00CA4D8C /* ResignView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				CF97617C1681C9CA00FB2C1E /* AlarmView.m in Sources */,
 				CF9761821681D8F100FB2C1E /* AlertView.m in Sources */,
 				56907E3F168240A700C7620A /* SettingsView.m in Sources */,
+				564B063B1682D1EB00CA4D8C /* ResignView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

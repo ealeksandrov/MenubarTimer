@@ -25,6 +25,9 @@
 }
 
 -(IBAction)switchActivated:(id)sender {
+    
+    [[self.view window] makeFirstResponder:nil];
+    
     if(self.switchControl.state) {
         if(secondsLeft<1)
             [self.switchControl setState:0];
@@ -42,6 +45,9 @@
 }
 
 -(IBAction)sliderValueChanged:(id)sender {
+    
+    [[self.view window] makeFirstResponder:nil];
+    
     NSSlider *slider = (NSSlider *)sender;
     secondsLeft=60*slider.intValue;
     [self.timeField setStringValue:[NSString stringWithFormat:@"%d",slider.intValue]];

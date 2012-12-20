@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1070</int>
-		<string key="IBDocument.SystemVersion">11G63</string>
+		<int key="IBDocument.SystemTarget">1080</int>
+		<string key="IBDocument.SystemVersion">12C60</string>
 		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
-		<string key="IBDocument.AppKitVersion">1138.51</string>
-		<string key="IBDocument.HIToolboxVersion">569.00</string>
+		<string key="IBDocument.AppKitVersion">1187.34</string>
+		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">2844</string>
@@ -55,6 +55,8 @@
 										<int key="NSvFlags">268</int>
 										<string key="NSFrame">{{79, 1}, {117, 32}}</string>
 										<reference key="NSSuperview" ref="742310192"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="274031164">
@@ -75,12 +77,14 @@
 											<int key="NSPeriodicDelay">200</int>
 											<int key="NSPeriodicInterval">25</int>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSButton" id="886914438">
 										<reference key="NSNextResponder" ref="742310192"/>
 										<int key="NSvFlags">268</int>
 										<string key="NSFrame">{{194, 93}, {61, 22}}</string>
 										<reference key="NSSuperview" ref="742310192"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="239036120"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
@@ -105,12 +109,14 @@
 											<int key="NSPeriodicDelay">200</int>
 											<int key="NSPeriodicInterval">25</int>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSTextField" id="239036120">
 										<reference key="NSNextResponder" ref="742310192"/>
 										<int key="NSvFlags">268</int>
 										<string key="NSFrame">{{15, 40}, {38, 17}}</string>
 										<reference key="NSSuperview" ref="742310192"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="735492975"/>
 										<string key="NSReuseIdentifierKey">_NS:1535</string>
 										<bool key="NSEnabled">YES</bool>
@@ -140,12 +146,14 @@
 												</object>
 											</object>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSTextField" id="735492975">
 										<reference key="NSNextResponder" ref="742310192"/>
 										<int key="NSvFlags">268</int>
 										<string key="NSFrame">{{58, 37}, {186, 22}}</string>
 										<reference key="NSSuperview" ref="742310192"/>
+										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="53141929"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
@@ -173,12 +181,15 @@
 												<reference key="NSColor" ref="170816113"/>
 											</object>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 									<object class="NSDatePicker" id="219493456">
 										<reference key="NSNextResponder" ref="742310192"/>
 										<int key="NSvFlags">268</int>
 										<string key="NSFrame">{{12, 85}, {136, 44}}</string>
 										<reference key="NSSuperview" ref="742310192"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="886914438"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSDatePickerCell" key="NSCell" id="434143977">
@@ -227,16 +238,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 											</object>
 											<reference key="NSTextColor" ref="86493750"/>
 										</object>
+										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 								</array>
 								<string key="NSFrame">{{1, 1}, {262, 132}}</string>
 								<reference key="NSSuperview" ref="954629540"/>
-								<reference key="NSNextKeyView" ref="886914438"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="219493456"/>
 								<string key="NSReuseIdentifierKey">_NS:11</string>
 							</object>
 						</array>
 						<string key="NSFrame">{{6, 7}, {264, 134}}</string>
 						<reference key="NSSuperview" ref="870630322"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="742310192"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSOffsets">{0, 0}</string>
@@ -264,9 +278,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 				</array>
 				<string key="NSFrameSize">{276, 151}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="954629540"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<string key="NSClassName">NSView</string>
+				<string key="NSClassName">ResignView</string>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -458,7 +473,75 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 			<nil key="sourceID"/>
 			<int key="maxID">54</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">AlarmView</string>
+					<string key="superclassName">NSViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="deleteMe:">id</string>
+						<string key="switchActivated:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="deleteMe:">
+							<string key="name">deleteMe:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="switchActivated:">
+							<string key="name">switchActivated:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="datePicker">NSDatePicker</string>
+						<string key="noteField">NSTextField</string>
+						<string key="switchControl">OnOffSwitchControl</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="datePicker">
+							<string key="name">datePicker</string>
+							<string key="candidateClassName">NSDatePicker</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="noteField">
+							<string key="name">noteField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="switchControl">
+							<string key="name">switchControl</string>
+							<string key="candidateClassName">OnOffSwitchControl</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/AlarmView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">OnOffSwitchControl</string>
+					<string key="superclassName">NSButton</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/OnOffSwitchControl.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">OnOffSwitchControlCell</string>
+					<string key="superclassName">NSButtonCell</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/OnOffSwitchControlCell.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ResignView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ResignView.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
