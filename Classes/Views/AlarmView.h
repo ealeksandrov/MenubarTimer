@@ -13,6 +13,7 @@
 @required
 - (void)deleteTimer:(NSViewController *)timerInstance;
 - (void)fireAlarmWithNote:(NSString *)note;
+- (void)object:(NSViewController *)obj switchedTo:(bool)state;
 @end
 
 

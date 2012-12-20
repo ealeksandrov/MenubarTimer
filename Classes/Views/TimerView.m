@@ -25,7 +25,7 @@
 }
 
 -(IBAction)switchActivated:(id)sender {
-    secondsLeft=5;
+    [self.delegate object:self switchedTo:self.switchControl.state];
     
     [[self.view window] makeFirstResponder:nil];
     
@@ -82,6 +82,7 @@
     [self.slider setFloatValue:secondsLeft/60];
     
     if (secondsLeft<1) {
+        [self.delegate object:self switchedTo:NO];
         [self.switchControl setState:0];
         [self.delegate fireAlarmWithNote:[self.noteField stringValue]];
         [timer invalidate];

@@ -15,6 +15,7 @@
 }
 
 -(IBAction)switchActivated:(id)sender {
+    [self.delegate object:self switchedTo:self.switchControl.state];
     
     [[self.view window] makeFirstResponder:nil];
     
@@ -54,6 +55,8 @@
 }
 
 -(void)timerTick:(id)sender {
+    [self.delegate object:self switchedTo:NO];
+    
     [self.switchControl setState:0];
     [self.delegate fireAlarmWithNote:[self.noteField stringValue]];
     [timer invalidate];

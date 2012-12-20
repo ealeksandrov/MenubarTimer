@@ -33,7 +33,7 @@
 {
 	[self.statusItem drawStatusBarBackgroundInRect:dirtyRect withHighlight:self.isHighlighted];
     
-    NSImage *icon = self.isHighlighted ? self.alternateImage : self.image;
+    NSImage *icon = self.isTimer ? self.alternateImage : self.image;
     NSSize iconSize = [icon size];
     NSRect bounds = self.bounds;
     CGFloat iconX = roundf((NSWidth(bounds) - iconSize.width) / 2);
@@ -61,6 +61,13 @@
     [self setNeedsDisplay:YES];
 }
 
+- (void)setTimer:(BOOL)newFlag
+{
+    if (_isTimer == newFlag) return;
+    _isTimer = newFlag;
+    [self setNeedsDisplay:YES];
+}
+
 #pragma mark -
 
 - (void)setImage:(NSImage *)newImage
@@ -75,7 +82,7 @@
 {
     if (_alternateImage != newImage) {
         _alternateImage = newImage;
-        if (self.isHighlighted) {
+        if (self.isHighlighted || self.isTimer) {
             [self setNeedsDisplay:YES];
         }
     }

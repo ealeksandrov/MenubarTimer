@@ -12,6 +12,7 @@
 #import "MenubarController.h"
 #import "NSView+Animations.h"
 #import "AlertView.h"
+#import "AppDelegate.h"
 
 #define OPEN_DURATION .15
 #define CLOSE_DURATION .1
@@ -40,6 +41,7 @@
         _delegate = delegate;
         popupHeight=POPUP_HEIGHT;
         timersArray = [NSMutableArray array];
+        statesArray = [NSMutableArray array];
         showAlertWindow=YES;
     }
     return self;
@@ -67,6 +69,7 @@
         newTimer.delegate=self;
         [self.backgroundView addSubview:newTimer.view animated:YES];
         [timersArray addObject:newTimer];
+        [statesArray addObject:[NSNumber numberWithBool:NO]];
         }
 }
 
@@ -83,7 +86,25 @@
         newAlarm.delegate=self;
         [self.backgroundView addSubview:newAlarm.view animated:YES];
         [timersArray addObject:newAlarm];
+        [statesArray addObject:[NSNumber numberWithBool:NO]];
     }
+}
+
+- (void) object:(NSViewController *)obj switchedTo:(bool)state {
+    [statesArray replaceObjectAtIndex:[timersArray indexOfObject:obj] withObject:[NSNumber numberWithBool:state]];
+    
+    bool on=NO;
+    
+    for (NSNumber *n in statesArray) {
+        if(n!=[NSNumber numberWithBool:NO])
+            on=YES;
+    }
+    
+    if(on)
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"turnIconOn" object:nil];
+    else
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"turnIconOff" object:nil];
+    
 }
 
 -(void) resignTextControl {

@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		564B063B1682D1EB00CA4D8C /* ResignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B063A1682D1EB00CA4D8C /* ResignView.m */; };
+		564B063F1682EA6B00CA4D8C /* alarm_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 564B063D1682EA6B00CA4D8C /* alarm_off.png */; };
+		564B06401682EA6B00CA4D8C /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 564B063E1682EA6B00CA4D8C /* alarm.png */; };
 		565ACE011680E57D001F0B35 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565ACE001680E57D001F0B35 /* Cocoa.framework */; };
 		565ACE251680E66B001F0B35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE241680E66B001F0B35 /* AppDelegate.m */; };
 		565ACE281680E672001F0B35 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE271680E672001F0B35 /* MainMenu.xib */; };
 		565ACE2D1680E678001F0B35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE2A1680E678001F0B35 /* main.m */; };
-		565ACE311680E762001F0B35 /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE2F1680E762001F0B35 /* Status.png */; };
-		565ACE321680E762001F0B35 /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 565ACE301680E762001F0B35 /* StatusHighlighted.png */; };
 		565ACE361680E821001F0B35 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE351680E821001F0B35 /* StatusItemView.m */; };
 		565ACE391680E938001F0B35 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE381680E938001F0B35 /* BackgroundView.m */; };
 		565ACE3C1680EA95001F0B35 /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565ACE3B1680EA95001F0B35 /* PanelController.m */; };
@@ -37,6 +37,8 @@
 /* Begin PBXFileReference section */
 		564B06391682D1EB00CA4D8C /* ResignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResignView.h; sourceTree = "<group>"; };
 		564B063A1682D1EB00CA4D8C /* ResignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResignView.m; sourceTree = "<group>"; };
+		564B063D1682EA6B00CA4D8C /* alarm_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm_off.png; sourceTree = "<group>"; };
+		564B063E1682EA6B00CA4D8C /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		565ACDFC1680E57D001F0B35 /* MenubarTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenubarTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565ACE001680E57D001F0B35 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		565ACE031680E57D001F0B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -48,8 +50,6 @@
 		565ACE2A1680E678001F0B35 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		565ACE2B1680E678001F0B35 /* MenubarTimer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MenubarTimer-Info.plist"; sourceTree = "<group>"; };
 		565ACE2C1680E678001F0B35 /* MenubarTimer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MenubarTimer-Prefix.pch"; sourceTree = "<group>"; };
-		565ACE2F1680E762001F0B35 /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Status.png; sourceTree = "<group>"; };
-		565ACE301680E762001F0B35 /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusHighlighted.png; sourceTree = "<group>"; };
 		565ACE341680E821001F0B35 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
 		565ACE351680E821001F0B35 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
 		565ACE371680E938001F0B35 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 		565ACE261680E672001F0B35 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				565ACE2F1680E762001F0B35 /* Status.png */,
-				565ACE301680E762001F0B35 /* StatusHighlighted.png */,
+				564B063D1682EA6B00CA4D8C /* alarm_off.png */,
+				564B063E1682EA6B00CA4D8C /* alarm.png */,
 				565ACE271680E672001F0B35 /* MainMenu.xib */,
 				565ACE401680F075001F0B35 /* Panel.xib */,
 				56B56A31168187AA0080882F /* TimerView.xib */,
@@ -254,13 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				565ACE281680E672001F0B35 /* MainMenu.xib in Resources */,
-				565ACE311680E762001F0B35 /* Status.png in Resources */,
-				565ACE321680E762001F0B35 /* StatusHighlighted.png in Resources */,
 				565ACE411680F075001F0B35 /* Panel.xib in Resources */,
 				56B56A32168187AA0080882F /* TimerView.xib in Resources */,
 				CF97617F1681CFE200FB2C1E /* AlarmView.xib in Resources */,
 				CF9761841681DA7100FB2C1E /* AlertView.xib in Resources */,
 				56907E411682472A00C7620A /* SettingsView.xib in Resources */,
+				564B063F1682EA6B00CA4D8C /* alarm_off.png in Resources */,
+				564B06401682EA6B00CA4D8C /* alarm.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

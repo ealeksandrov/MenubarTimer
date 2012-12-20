@@ -15,7 +15,11 @@
 @interface MenubarController : NSObject
 
 @property (nonatomic) BOOL hasActiveIcon;
+@property (nonatomic) BOOL hasTimerIcon;
 @property (nonatomic, strong, readonly) NSStatusItem *statusItem;
 @property (nonatomic, strong, readonly) StatusItemView *statusItemView;
+
+-(void)turnIconOn;
+-(void)turnIconOff;
 
 @end

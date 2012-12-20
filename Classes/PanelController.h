@@ -28,6 +28,7 @@
     BOOL _hasActivePanel;
     int popupHeight;
     NSMutableArray *timersArray;
+    NSMutableArray *statesArray;
     bool showAlertWindow;
 }
 
