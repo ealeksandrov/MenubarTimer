@@ -10,6 +10,7 @@
 #import "StatusItemView.h"
 #import "TimerView.h"
 #import "AlarmView.h"
+#import "SettingsView.h"
 
 @class PanelController;
 
@@ -23,10 +24,11 @@
 
 #pragma mark -
 
-@interface PanelController : NSWindowController <NSWindowDelegate,TimerDelegate,AlarmDelegate> {
+@interface PanelController : NSWindowController <NSWindowDelegate,TimerDelegate,AlarmDelegate,SettingsDelegate> {
     BOOL _hasActivePanel;
     int popupHeight;
     NSMutableArray *timersArray;
+    bool showAlertWindow;
 }
 
 @property (nonatomic, unsafe_unretained) IBOutlet BackgroundView *backgroundView;

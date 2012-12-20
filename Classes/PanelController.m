@@ -12,7 +12,6 @@
 #import "MenubarController.h"
 #import "NSView+Animations.h"
 #import "AlertView.h"
-#import "SettingsView.h"
 
 #define OPEN_DURATION .15
 #define CLOSE_DURATION .1
@@ -41,6 +40,7 @@
         _delegate = delegate;
         popupHeight=POPUP_HEIGHT;
         timersArray = [NSMutableArray array];
+        showAlertWindow=YES;
     }
     return self;
 }
@@ -82,16 +82,6 @@
     }
 }
 
--(IBAction)openPrefs:(id)sender {
-    
-    SettingsView *view = [[SettingsView alloc] initWithWindowNibName:@"SettingsView"];
-    NSWindow *window = view.window;
-    [NSApp activateIgnoringOtherApps:YES];
-    [window setLevel:NSPopUpMenuWindowLevel];
-    [NSApp runModalForWindow:window];
-    
-}
-
 -(void) deleteTimer:(NSViewController *)timerInstance {
     NSUInteger delIndex = [timersArray indexOfObject:timerInstance];
     [timersArray removeObject:timerInstance];
@@ -121,6 +111,21 @@
     [NSApp activateIgnoringOtherApps:YES];
     [window setLevel:NSPopUpMenuWindowLevel];
     [NSApp runModalForWindow:window];
+}
+
+-(IBAction)openPrefs:(id)sender {
+    
+    SettingsView *view = [[SettingsView alloc] initWithSetting:showAlertWindow];
+    view.delegate=self;
+    NSWindow *window = view.window;
+    [NSApp activateIgnoringOtherApps:YES];
+    [window setLevel:NSPopUpMenuWindowLevel];
+    [NSApp runModalForWindow:window];
+    
+}
+
+-(void)saveSetting:(bool)showWindow {
+    showAlertWindow=showWindow;
 }
 
 #pragma mark -

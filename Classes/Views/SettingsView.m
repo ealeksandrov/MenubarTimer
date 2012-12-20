@@ -14,6 +14,15 @@
 
 @implementation SettingsView
 
+-(id)initWithSetting:(bool)setting {
+    self = [self initWithWindowNibName:@"SettingsView"];
+    if(self) {
+        selectedWindow = setting;
+    }
+    
+    return self;
+}
+
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -28,11 +37,16 @@
 {
     [super windowDidLoad];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    if(selectedWindow)
+        [self.radioGroup selectCellAtRow:1 column:0];
 }
 
 - (void)windowWillClose:(NSNotification *)notification
 {
+    if(self.radioGroup.selectedRow)
+        [self.delegate saveSetting:YES];
+    else
+        [self.delegate saveSetting:NO];
     [NSApp stopModal];
 }
 
