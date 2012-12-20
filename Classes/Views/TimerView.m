@@ -25,6 +25,7 @@
 }
 
 -(IBAction)switchActivated:(id)sender {
+    secondsLeft=5;
     
     [[self.view window] makeFirstResponder:nil];
     

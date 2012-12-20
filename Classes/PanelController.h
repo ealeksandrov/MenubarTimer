@@ -32,13 +32,16 @@
 }
 
 @property (nonatomic, unsafe_unretained) IBOutlet BackgroundView *backgroundView;
+@property (nonatomic, unsafe_unretained) IBOutlet BackgroundView *backgroundView2;
+@property (nonatomic, unsafe_unretained) IBOutlet NSTextField *noteField;
+@property (nonatomic, unsafe_unretained) IBOutlet NSWindow *alertPopup;
 
 @property (nonatomic) BOOL hasActivePanel;
 @property (nonatomic, unsafe_unretained, readonly) id<PanelControllerDelegate> delegate;
 
 - (id)initWithDelegate:(id<PanelControllerDelegate>)delegate;
 
-- (void)openPanel;
+- (void)openPanelDefault:(bool)panelFlag;
 - (void)closePanel;
 - (void)resignTextControl;
 
@@ -46,5 +49,7 @@
 -(IBAction)addAlarm:(id)sender;
 -(IBAction)terminate:(id)sender;
 -(IBAction)openPrefs:(id)sender;
+
+-(IBAction)closeMe:(id)sender;
 
 @end

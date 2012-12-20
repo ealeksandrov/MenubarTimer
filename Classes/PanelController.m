@@ -116,11 +116,29 @@
 }
 
 - (void)fireAlarmWithNote:(NSString *)note {
+    if(showAlertWindow) {
     AlertView *view = [[AlertView alloc] initWithMessage:note];
     NSWindow *window = view.window;
     [NSApp activateIgnoringOtherApps:YES];
     [window setLevel:NSPopUpMenuWindowLevel];
     [NSApp runModalForWindow:window];
+    } else {
+        if(note && [note length]>0)
+            [self.noteField setStringValue:note];
+        else
+            [self.noteField setStringValue:@"Close me!"];
+        
+        if(_hasActivePanel) {
+            [self closePanel];
+            dispatch_after(dispatch_walltime(NULL, NSEC_PER_SEC * CLOSE_DURATION * 2), dispatch_get_main_queue(), ^{
+                _hasActivePanel = YES;
+                [self openPanelDefault:NO];
+            });
+        } else {
+            _hasActivePanel = YES;
+            [self openPanelDefault:NO];
+        }
+    }
 }
 
 -(IBAction)openPrefs:(id)sender {
@@ -156,6 +174,18 @@
     NSRect panelRect = [[self window] frame];
     panelRect.size.height = POPUP_HEIGHT;
     [[self window] setFrame:panelRect display:NO];
+    
+    
+    NSPanel *panel2 = (id)[self alertPopup];
+    [panel2 setAcceptsMouseMovedEvents:YES];
+    [panel2 setLevel:NSPopUpMenuWindowLevel];
+    [panel2 setOpaque:NO];
+    [panel2 setBackgroundColor:[NSColor clearColor]];
+    
+    // Resize panel
+    NSRect panelRect2 = [[self alertPopup] frame];
+    panelRect2.size.height = POPUP_HEIGHT;
+    [[self alertPopup] setFrame:panelRect2 display:NO];
 }
 
 #pragma mark - Public accessors
@@ -167,13 +197,22 @@
 
 - (void)setHasActivePanel:(BOOL)flag
 {
+    if([[self alertPopup] isVisible] && flag)
+    {
+        [self closePanel];
+        dispatch_after(dispatch_walltime(NULL, NSEC_PER_SEC * CLOSE_DURATION * 2), dispatch_get_main_queue(), ^{
+            _hasActivePanel = YES;
+            [self openPanelDefault:YES];
+        });
+    }
+    
     if (_hasActivePanel != flag)
     {
         _hasActivePanel = flag;
         
         if (_hasActivePanel)
         {
-            [self openPanel];
+            [self openPanelDefault:YES];
         }
         else
         {
@@ -194,6 +233,9 @@
     if ([[self window] isVisible])
     {
         self.hasActivePanel = NO;
+    } else if([[self alertPopup] isVisible])
+    {
+        self.hasActivePanel = NO;
     }
 }
 
@@ -207,6 +249,7 @@
     CGFloat panelX = statusX - NSMinX(panelRect);
     
     self.backgroundView.arrowX = panelX;
+    self.backgroundView2.arrowX = panelX;
 }
 
 #pragma mark - Keyboard
@@ -243,9 +286,9 @@
     return statusRect;
 }
 
-- (void)openPanel
+- (void)openPanelDefault:(bool)panelFlag
 {
-    NSWindow *panel = [self window];
+    NSWindow *panel = panelFlag ? [self window] : [self alertPopup];
     
     NSRect screenRect = [[[NSScreen screens] objectAtIndex:0] frame];
     NSRect statusRect = [self statusRectForWindow:panel];
@@ -288,16 +331,23 @@
     [NSAnimationContext endGrouping];
 }
 
+-(IBAction)closeMe:(id)sender {
+    self.hasActivePanel = NO;
+}
+
 - (void)closePanel
 {
+    bool panelFlag = [[self window] isVisible];
+    NSWindow *windowToClose = panelFlag ? [self window] : [self alertPopup];
+    
     [NSAnimationContext beginGrouping];
     [[NSAnimationContext currentContext] setDuration:CLOSE_DURATION];
-    [[[self window] animator] setAlphaValue:0];
+    [[windowToClose animator] setAlphaValue:0];
     [NSAnimationContext endGrouping];
     
     dispatch_after(dispatch_walltime(NULL, NSEC_PER_SEC * CLOSE_DURATION * 2), dispatch_get_main_queue(), ^{
         
-        [self.window orderOut:nil];
+        [windowToClose orderOut:nil];
     });
 }
 

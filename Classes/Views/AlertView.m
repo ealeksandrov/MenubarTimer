@@ -26,8 +26,10 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    NSLog(@"wqe %@",_note);
-    //[self.noteField setStringValue:_note];
+    if(_note && [_note length]>0)
+        [self.noteField setStringValue:_note];
+    else
+        [self.noteField setStringValue:@"Close me!"];
 }
 
 - (void)windowWillClose:(NSNotification *)notification
